@@ -1,16 +1,21 @@
 <!doctype html>
 <html>
     <head>
+        <title>Halpert's Blog</title>
+        
         <script>
          var urlRoot = {{ request.script_root|tojson|safe }};
         </script>
-
+        
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Coming+Soon|Nunito" rel="stylesheet">
         <link rel="stylesheet" href="{{ url_for('static', filename='styles/site.css') }}">
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.js" ></script>
         <script src="https://cdn.rawgit.com/kyleperik/7db540178c088fe725ef3399766e126d/raw/880a39ab9e04ffbd02e272f95475570ae0100c0d/vue_utils.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js" ></script>
 
         <script src="{{ url_for('static', filename='scripts/start.js') }}"></script>
+        <script src="{{ url_for('static', filename='scripts/page.js') }}"></script>
     </head>
     <body>
         <div id="Root">
