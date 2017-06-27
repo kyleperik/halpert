@@ -1,3 +1,5 @@
 <div>
     <page title="Halpert's Blog" name="index" />
+    <page v-if="new_post" />
+    <button v-if="!edit_mode" @click="create_post">New Post</button>
 </div>

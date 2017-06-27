@@ -8,7 +8,18 @@
     function initialize() {
         vue_utils.root = window.urlRoot;
         
-        vue_utils.push_component('App', { });
+        vue_utils.push_component('App', {
+            data: function () {
+                return  {
+                    new_post: false
+                }
+            },
+            methods: {
+                create_post: function () {
+                    this.new_post = true;
+                }
+            }
+        });
 
         vue_utils.register_components(start);
     }
